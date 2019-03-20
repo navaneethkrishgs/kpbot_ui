@@ -702,7 +702,7 @@ function check_user(pageSettings){
     $('#settingsModalCenter').modal('hide');
     // $(".indexpageClass").removeAttr('id');
  if(pageSettings == 'welcome'){
-    Stop();
+  
     val =  $("#settingsPass").val();
     val1 = $("#settingsPassH").val();
     console.log(val1);
@@ -831,10 +831,10 @@ function nextPage(nextPage){
     // startTimer();
       $("#indexPage").hide();  
       $("#welcomePage").show();
-      setTimeout(function(){ start();  $("#welcomePage").hide(); $(".settingsPageBackBtn1").hide();$(".settingsPageBackBtn").show(); $("#counterPage").show(); $("#settingsBtn3").show() },2000);
+      setTimeout(function(){   $("#welcomePage").hide(); $(".settingsPageBackBtn1").hide();$(".settingsPageBackBtn").show(); $("#counterPage").show(); $("#settingsBtn3").show() },2000);
   }else if(nextPage == "speech"){
   
-    start();
+   
     $(".skype-chat").hide(); /////skype hide
       var speech_value = new ROSLIB.Message({
       data : 'false'
@@ -850,7 +850,7 @@ function nextPage(nextPage){
      
       
   }else if(nextPage == "main"){
-    start();
+  
 
     $(".skype-chat").hide(); /////skype hide
       
@@ -881,7 +881,7 @@ function nextPage(nextPage){
     
 
       console.log('backIon');
-      Stop();
+    
        var speech_value = new ROSLIB.Message({
       data : 'true'
  		 });
@@ -906,7 +906,7 @@ function nextPage(nextPage){
       ui_refresh.publish(str);
     //   $("#back_home_id").removeAttr('onclick');
  } else if(nextPage == "settings"){
-    Reset();
+    // Reset();
     $("#settingsPage").hide();
     $("#counterPage").show();
     // $("#indexPage").show();
@@ -928,7 +928,7 @@ else if(nextPage == "reason"){
     $("#reasonForVisitingPage").hide();
     $("#counterPage").show();
 }else if(nextPage == 'visterPage'){
-    start();
+    
     $("#others6Page").hide();
     $("#counterPage").show();
     //$("#reasonForVisitingPage").show();
@@ -1037,7 +1037,7 @@ function navigation(){
 // speech
 
 function speech(){
-    Stop();
+   
   var speech_value = new ROSLIB.Message({
       data : 'true'
   });
@@ -1047,7 +1047,7 @@ function speech(){
     $("#navigationPage").hide();
 }
 function speechChange(){
-    Stop();
+
   var speech_value = new ROSLIB.Message({
       data : 'true'
   });
@@ -1060,7 +1060,7 @@ function speechChange(){
 
 // videocall
 function videocall(){
-    Stop();
+   
     $(".skype-chat").show(); //skype show
     $("#counterPage").hide();
     $("#videoPage").show();
@@ -1070,7 +1070,7 @@ function videocall(){
 
 //////////////reasonForVisiting
 function reasonForVisiting(){
-    Stop();
+ 
     $("#counterPage").hide();
     $("#others6Page").show();
     //$("#reasonForVisitingPage").show();
@@ -1206,7 +1206,7 @@ function addNewUser(){
 
 function inCounterBanigation1(){
    console.log('1 is clicked');
-    Stop();
+  
   var navigation = new ROSLIB.Service({
     ros : ros,
     name : '/counter_no',
@@ -1259,7 +1259,7 @@ function inCounterBanigation1(){
 function inCounterBanigation2(){
 
  console.log('2 is clicked');
-Stop();
+
   var navigation = new ROSLIB.Service({
     ros : ros,
     name : '/counter_no',
@@ -1306,7 +1306,7 @@ Stop();
 }
 function inCounterBanigation3(){
   console.log('3 is clicked');
-Stop();
+
   var navigation = new ROSLIB.Service({
     ros : ros,
     name : '/counter_no',
@@ -1353,7 +1353,7 @@ Stop();
 }
 function inCounterBanigation4(){
   console.log('4 is clicked');
-Stop();
+
   var navigation = new ROSLIB.Service({
     ros : ros,
     name : '/counter_no',
@@ -1399,7 +1399,7 @@ Stop();
 }
 function inCounterBanigation5(){
   console.log('5 is clicked');
-Stop();
+
   var navigation = new ROSLIB.Service({
     ros : ros,
     name : '/counter_no',
@@ -1446,7 +1446,7 @@ Stop();
 }
 function inCounterBanigation6(){
   console.log('6 is clicked');
-Stop();
+
   var navigation = new ROSLIB.Service({
     ros : ros,
     name : '/counter_no',
